@@ -2,7 +2,7 @@ services:
   - type: web
     name: recipe-app-server
     env: node
-    buildCommand: npm install && npm run build && ls -la && ls -la dist/
+    buildCommand: npm install --omit=dev && npm run build && ls -la && ls -la dist/
     startCommand: cd /opt/render/project/src && node dist/server.js
     envVars:
       - key: NODE_ENV
