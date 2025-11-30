@@ -3,7 +3,7 @@ services:
     name: recipe-app-server
     env: node
     buildCommand: npm install && npm run build && ls -la && ls -la dist/
-    startCommand: cd /opt/render/project && node dist/server.js
+    startCommand: cd /opt/render/project/src && node dist/server.js
     envVars:
       - key: NODE_ENV
         value: production
